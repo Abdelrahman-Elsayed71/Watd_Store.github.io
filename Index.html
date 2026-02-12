@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watd_Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <button class="cart-btn" onclick="openCart()">
+                        🛒 Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Watd Store</h1>
+        <p>Discover our exclusive collection of international perfumes</p>
+    </section>
+
+    <section class="products-section" id="products">
+        <h2 class="section-title">products</h2>
+
+        <div class="products-grid">
+            <!-- Product 1: Beach Afternoon -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/frankel-Afternoon.png" alt="Beach Afternoon" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Beach Afternoon 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Beach Afternoon 100ml', 'ASSAF-FRANKEL', 0, 'frankel-Afternoon.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2: Aventus -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/Frankel-Aventus.png" alt="Aventus" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Aventus 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Aventus 100ml', 'ASSAF-FRANKEL', 0, 'Frankel-Aventus.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3: Battle -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/FRANKEL-BATTLE.png" alt="Battle" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Battle 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Battle 100ml', 'ASSAF-FRANKEL', 0, 'FRANKEL-BATTLE.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4: Imagination Intense -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/FRANKEL-IMAGINATION .png" alt="Imagination Intense" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Imagination Intense 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Imagination Intense 100ml', 'ASSAF-FRANKEL', 0, 'FRANKEL-IMAGINATION .png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5: Silver Intense -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/Frankel-Silver.png" alt="Silver Intense" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Silver Intense 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Silver Intense 100ml', 'ASSAF-FRANKEL', 0, 'Frankel-Silver.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6: Storm -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/FRANKEL-STORM .png" alt="Storm" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Storm 100ml</h3>
+                    <p class="product-brand">ASSAF-FRANKEL</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Storm 100ml', 'ASSAF-FRANKEL', 0, 'FRANKEL-STORM .png')">Add to Cart</button>
+                </div>
+            </div>
+
+  <!-- Product 7: Match & Oud -->
+            <div class="product-card out-of-stock">
+                <div class="product-image-container">
+                    <img src="imags/Match & oud .png" alt="Match & Oud" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Match & Oud 50ml</h3>
+                    <p class="product-brand">MATCH</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Match & Oud 50ml', 'MATCH',0,' Match & oud .png ')">Out of stock</button>
+                </div>
+            </div>
+
+            <!-- Product 8: Afkano -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/Match Afkano .png" alt="Afkano" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Afkano 50ml</h3>
+                    <p class="product-brand">MATCH</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Afkano 50ml', 'MATCH', 0, 'Match Afkano .png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 9: Self -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/Match Self .png" alt="Self" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Self 50ml</h3>
+                    <p class="product-brand">MATCH</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Self 50ml', 'MATCH', 0, 'Match Self .png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 10: Premium Touch Hair Mask -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="imags/Premium Touch Hair Mask - FINO.png" alt="Premium Touch Hair Mask" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Premium Touch Hair Mask</h3>
+                    <p class="product-brand">FINO</p>
+                    <p class="product-price">Price: EGP</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Premium Touch Hair Mask', 'FINO', 0, 'Premium Touch Hair Mask - FINO.png')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCart()">×</span>
+            <h2 class="cart-title">🛒 Shopping Cart</h2>
+
+            <div id="cartContent">
+                <div class="cart-empty">
+                    Your cart is empty
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckout()">×</span>
+            <h2 class="form-title">Complete Your Order</h2>
+            <form id="checkoutForm" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input type="text" id="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input type="tel" id="customerPhone" required placeholder="+20 1000000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail">Email</label>
+                    <input type="email" id="customerEmail" placeholder="example@gmail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="governorate">Governorate *</label>
+                    <select id="governorate" required>
+                        <option value="">Select Governorate</option>
+                        <option value="Cairo">Cairo</option>
+                        <option value="Giza">Giza</option>
+                        <option value="Alexandria">Alexandria</option>
+                        <option value="Dakahlia">Dakahlia</option>
+                        <option value="Sharqia">Sharqia</option>
+                        <option value="Monufia">Monufia</option>
+                        <option value="Qalyubia">Qalyubia</option>
+                        <option value="Beheira">Beheira</option>
+                        <option value="Gharbia">Gharbia</option>
+                        <option value="Port Said">Port Said</option>
+                        <option value="Damietta">Damietta</option>
+                        <option value="Ismailia">Ismailia</option>
+                        <option value="Suez">Suez</option>
+                        <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+                        <option value="Fayoum">Fayoum</option>
+                        <option value="Beni Suef">Beni Suef</option>
+                        <option value="Minya">Minya</option>
+                        <option value="Asyut">Asyut</option>
+                        <option value="Sohag">Sohag</option>
+                        <option value="Qena">Qena</option>
+                        <option value="Aswan">Aswan</option>
+                        <option value="Luxor">Luxor</option>
+                        <option value="Red Sea">Red Sea</option>
+                        <option value="New Valley">New Valley</option>
+                        <option value="Matrouh">Matrouh</option>
+                        <option value="North Sinai">North Sinai</option>
+                        <option value="South Sinai">South Sinai</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Detailed Address *</label>
+                    <textarea id="address" rows="3" required placeholder="Street, Area, Nearest Landmark"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" rows="2" placeholder="Any additional notes"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        <h3>✅ Your order has been sent successfully!</h3>
+        <p>We will contact you soon to confirm the order</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Thank you for trusting Watd Store</p>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i>📱</i>
+                <a href="tel:+201288717913" dir="ltr">+20 128 871 7913</a>
+            </div>
+            <div class="contact-item">
+                <i>📧</i>
+                <a href="mailto:Abdelrahman.71.Elsayed@hotmail.com">Abdelrahman.71.Elsayed@hotmail.com</a>
+            </div>
+        </div>
+
+        <div class="social-media">
+            <a href="#" class="social-link" title="Facebook"><i><h6>Facebook</h6></i></a>
+            <a href="https://wa.me/201288717913" class="social-link" title="WhatsApp" target="_blank"><i><h6>WhatsApp</h6></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Watd Store - All Rights Reserved</p>
+        <p style="margin-top: 0.5rem; color: #8B9DB8;">Imported Luxury Perfumes • Delivery Across Egypt</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
